@@ -1,0 +1,29 @@
+# .rubocop.yml
+
+require: 
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.0.5
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'test/**/*'
+    - 'db/**/*'
+    - 'bin/**/*'
+
+
+# Configuração básica para Rails
+Rails:
+  Enabled: true
+
+# Configuração de estilo para aspas duplas em strings
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+    Add the frozen_string_literal comment to the top of files
+    to help transition from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: false

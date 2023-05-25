@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2023_05_11_174951) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "token"
+    t.string "token", null: false
     t.index ["token"], name: "index_heroes_on_token"
   end
 
